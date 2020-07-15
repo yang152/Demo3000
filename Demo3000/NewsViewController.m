@@ -10,6 +10,7 @@
 #import <VLionNewsSDK/VLionNewsSDK.h>
 
 @interface NewsViewController ()<UIGestureRecognizerDelegate>
+@property (nonatomic, strong) VlionAdPageView *pageView;
 
 @end
 
@@ -17,8 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     VlionAdPageView *view = [[VlionAdPageView alloc] initWithFrame:self.view.bounds sceneName:@"scene" currentVC:self];
     [self.view addSubview:view];
+    self.pageView = view;
+    
+    self.title = @"新闻SDK内部自己加载广告";
+
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.pageView.frame = self.view.bounds;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

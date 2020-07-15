@@ -36,7 +36,7 @@
         [self.contentArr addObject:[@(arc4random()%100) stringValue]];
     }
 
-    VLNDrawAd *ad = [[VLNDrawAd alloc] initWithTagId:@"25592"];
+    VLNDrawAd *ad = [[VLNDrawAd alloc] initWithSceneName:@"scene"];
     ad.delegate = self;
     [ad loadAdDataWithCount:3];
     self.ad = ad;

@@ -9,7 +9,7 @@
 #import "InterstitialAdViewController.h"
 #import <VLionADSDK/VLNADSDK.h>
 
-@interface InterstitialAdViewController() <VLNInterstitialAdDelegate>
+@interface InterstitialAdViewController() <VLNInterstitialAdDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) VLNInterstitialAd *interstitialAd;
 
@@ -38,6 +38,9 @@
     [self.adButton addTarget:self action:@selector(showAd) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.adButton];
     
+    self.adButton.backgroundColor = [UIColor grayColor];
+    self.adButton.enabled = NO;
+    
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
@@ -46,6 +49,10 @@
 }
 
 - (void)interstitialAdDidLoad:(VLNInterstitialAd *)interstitialAd {
+    
+    self.adButton.backgroundColor = [UIColor blueColor];
+    self.adButton.enabled = YES;
+    
     NSLog(@"interstitialAdDidLoad");
 }
 
@@ -68,6 +75,8 @@
 - (void)interstitialAdDidClose:(VLNInterstitialAd *)interstitialAd {
     NSLog(@"interstitialAdDidClose");
     [self.interstitialAd loadAdData];
+    self.adButton.backgroundColor = [UIColor grayColor];
+    self.adButton.enabled = NO;
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

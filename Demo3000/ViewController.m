@@ -13,9 +13,12 @@
 #import "InterstitialAdViewController.h"
 #import "RewardVideoViewController.h"
 #import <RSGameVlionAd/RSGameVlionAd.h>
+#import <BUAdSDK/BUAdSDK.h>
 #import "NewsViewController.h"
 #import "DrawNativeViewController.h"
 #import <VLionADSDK/VLNDrawAd.h>
+#import "NewsOutAdViewController.h"
+#import "NewsOutAdViewController2.h"
 
 typedef NS_ENUM(NSInteger, ADType) {
     ADTypeBanner = 0,
@@ -25,10 +28,12 @@ typedef NS_ENUM(NSInteger, ADType) {
     ADTypeSplash=5,
     ADTypeDrawNative = 6,
     ADTypeDrawSmallGame = 7,
-    ADTypeDrawNews = 8
+    ADTypeNewsDemo = 8,
+    ADTypeOutAdNewsDemo = 9,
+    ADTypeOutAdNewsDemo2 = 10
 };
 
-@interface ViewController ()<VLNSplashAdDelegate>
+@interface ViewController ()
 
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UIView *interstitialView;
@@ -82,9 +87,19 @@ typedef NS_ENUM(NSInteger, ADType) {
                             @"ADType": @(ADTypeDrawSmallGame)
                         },
                         @{
-                            @"title": @"新闻SDK",
+                            @"title": @"SDK生成广告的新闻",
                             @"tagId": @"scene",
-                            @"ADType": @(ADTypeDrawNews)
+                            @"ADType": @(ADTypeNewsDemo)
+                        },
+                        @{
+                            @"title": @"您自己调我们SDK广告的新闻",
+                            @"tagId": @"scene",
+                            @"ADType": @(ADTypeOutAdNewsDemo)
+                        },
+                        @{
+                            @"title": @"您自己调自己广告的新闻",
+                            @"tagId": @"scene",
+                            @"ADType": @(ADTypeOutAdNewsDemo2)
                         }
                         
                         ];
@@ -149,12 +164,27 @@ typedef NS_ENUM(NSInteger, ADType) {
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case ADTypeDrawNews:
+        case ADTypeNewsDemo:
             {
                 NewsViewController *vc = [NewsViewController new];
                 [self.navigationController pushViewController:vc animated:YES];
             }
                 break;
+            
+        case ADTypeOutAdNewsDemo:
+        {
+            NewsOutAdViewController *vc = [NewsOutAdViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case ADTypeOutAdNewsDemo2:
+        {
+            NewsOutAdViewController2 *vc = [NewsOutAdViewController2 new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
         default:
             break;
     }
@@ -186,16 +216,7 @@ typedef NS_ENUM(NSInteger, ADType) {
 - (void)loadSplashAd:(NSString *)tagId {
     self.splashAd = [[VLNSplashAd alloc] initWithSceneName:@"scene"];
     self.splashAd.placeholderImage = [UIImage imageNamed:@"placeholderImage"];
-    [self.splashAd loadAdAndShowInWindow:[UIApplication sharedApplication].delegate.window];
-//    self.splashAd.delegate = self;
-}
-
-- (void)splashAdDidLoad:(VLNSplashAd *)splashAd {
-    [splashAd showAdInWindow:[UIApplication sharedApplication].delegate.window];
-}
-
-- (void)splashAd:(VLNSplashAd *)splashAd didFailWithError:(NSError *)error {
-    
+    [self.splashAd loadAdAndShowInWindow:self.view.window];
 }
 
 @end

@@ -32,8 +32,8 @@
             self.ad = ad;
             ad.placeholderImage = [UIImage imageNamed:@"bg_launch_1242"];
             ad.delegate = self;
-        //    [ad loadAdAndShowInWindow:self.window];
-            [self.ad loadAd];
+            [ad loadAdAndShowInWindow:self.window];
+//            [self.ad loadAd];
         }
         else {
             NSLog(@"sdk初始化失败");
@@ -57,7 +57,7 @@
 
 - (void)splashAdDidLoad:(VLNSplashAd *)splashAd {
     NSLog(@"VLNSplashAd DidLoad");
-    [self.ad showAdInWindow:self.window];
+//    [self.ad showAdInWindow:self.window];
 }
 
 - (void)splashAd:(VLNSplashAd *)splashAd didFailWithError:(NSError *)error {

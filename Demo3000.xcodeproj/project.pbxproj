@@ -12,23 +12,25 @@
 		7D563B9024A097FE00A5C18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D563B8F24A097FE00A5C18F /* Assets.xcassets */; };
 		7D563B9324A097FE00A5C18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D563B9124A097FE00A5C18F /* LaunchScreen.storyboard */; };
 		7D563B9624A097FE00A5C18F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D563B9524A097FE00A5C18F /* main.m */; };
-		7DA5674D24B32C7A00224A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5672D24B32C7900224A98 /* AppDelegate.m */; };
-		7DA5674E24B32C7A00224A98 /* DrawNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5672E24B32C7900224A98 /* DrawNativeViewController.xib */; };
-		7DA5674F24B32C7A00224A98 /* BannerADController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673124B32C7900224A98 /* BannerADController.m */; };
-		7DA5675024B32C7A00224A98 /* NativeInfosDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673324B32C7900224A98 /* NativeInfosDemoController.m */; };
-		7DA5675124B32C7A00224A98 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673424B32C7900224A98 /* NewsViewController.m */; };
-		7DA5675224B32C7A00224A98 /* DrawNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673624B32C7A00224A98 /* DrawNativeViewController.m */; };
-		7DA5675324B32C7A00224A98 /* RewardVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673A24B32C7A00224A98 /* RewardVideoViewController.m */; };
-		7DA5675424B32C7A00224A98 /* DrawAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673B24B32C7A00224A98 /* DrawAdCell.m */; };
-		7DA5675524B32C7A00224A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673C24B32C7A00224A98 /* ViewController.m */; };
-		7DA5675624B32C7A00224A98 /* NativeAdListsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5673D24B32C7A00224A98 /* NativeAdListsController.m */; };
-		7DA5675724B32C7A00224A98 /* NativeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5674224B32C7A00224A98 /* NativeHelper.m */; };
-		7DA5675824B32C7A00224A98 /* NativeDemoTableViewListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5674324B32C7A00224A98 /* NativeDemoTableViewListVC.m */; };
-		7DA5675924B32C7A00224A98 /* NativeNewsNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5674624B32C7A00224A98 /* NativeNewsNormalModel.m */; };
-		7DA5675A24B32C7A00224A98 /* NativeDemoTableViewListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5674724B32C7A00224A98 /* NativeDemoTableViewListVC.xib */; };
-		7DA5675B24B32C7A00224A98 /* nativeNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DA5674824B32C7A00224A98 /* nativeNews.json */; };
-		7DA5675C24B32C7A00224A98 /* NativeNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5674A24B32C7A00224A98 /* NativeNewsNormalCell.m */; };
-		7DA5675D24B32C7A00224A98 /* InterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5674C24B32C7A00224A98 /* InterstitialAdViewController.m */; };
+		7DA569E624BEC3AC00224A98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569C324BEC3A800224A98 /* ViewController.m */; };
+		7DA569E724BEC3AC00224A98 /* NativeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569C624BEC3A800224A98 /* NativeHelper.m */; };
+		7DA569E824BEC3AC00224A98 /* NativeDemoTableViewListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569C724BEC3A800224A98 /* NativeDemoTableViewListVC.m */; };
+		7DA569E924BEC3AC00224A98 /* NativeNewsNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569CA24BEC3A800224A98 /* NativeNewsNormalModel.m */; };
+		7DA569EA24BEC3AC00224A98 /* NativeDemoTableViewListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA569CB24BEC3A800224A98 /* NativeDemoTableViewListVC.xib */; };
+		7DA569EB24BEC3AC00224A98 /* nativeNews.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DA569CC24BEC3A800224A98 /* nativeNews.json */; };
+		7DA569EC24BEC3AC00224A98 /* NativeNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569CE24BEC3A800224A98 /* NativeNewsNormalCell.m */; };
+		7DA569ED24BEC3AC00224A98 /* BannerADController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569D124BEC3A800224A98 /* BannerADController.m */; };
+		7DA569EE24BEC3AC00224A98 /* DrawAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569D424BEC3A900224A98 /* DrawAdCell.m */; };
+		7DA569EF24BEC3AC00224A98 /* NewsOutAdViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569D524BEC3A900224A98 /* NewsOutAdViewController2.m */; };
+		7DA569F024BEC3AC00224A98 /* RewardVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569D824BEC3A900224A98 /* RewardVideoViewController.m */; };
+		7DA569F124BEC3AC00224A98 /* InterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569DA24BEC3AA00224A98 /* InterstitialAdViewController.m */; };
+		7DA569F224BEC3AC00224A98 /* DrawNativeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA569DB24BEC3AA00224A98 /* DrawNativeViewController.xib */; };
+		7DA569F324BEC3AC00224A98 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569DD24BEC3AA00224A98 /* NewsViewController.m */; };
+		7DA569F424BEC3AC00224A98 /* NativeInfosDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569DE24BEC3AA00224A98 /* NativeInfosDemoController.m */; };
+		7DA569F524BEC3AC00224A98 /* NativeAdListsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569E124BEC3AB00224A98 /* NativeAdListsController.m */; };
+		7DA569F624BEC3AC00224A98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569E224BEC3AB00224A98 /* AppDelegate.m */; };
+		7DA569F724BEC3AC00224A98 /* DrawNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569E324BEC3AB00224A98 /* DrawNativeViewController.m */; };
+		7DA569F824BEC3AC00224A98 /* NewsOutAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA569E524BEC3AB00224A98 /* NewsOutAdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,37 +42,41 @@
 		7D563B9224A097FE00A5C18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D563B9424A097FE00A5C18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D563B9524A097FE00A5C18F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7DA5672D24B32C7900224A98 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7DA5672E24B32C7900224A98 /* DrawNativeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawNativeViewController.xib; sourceTree = "<group>"; };
-		7DA5672F24B32C7900224A98 /* RewardVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardVideoViewController.h; sourceTree = "<group>"; };
-		7DA5673024B32C7900224A98 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7DA5673124B32C7900224A98 /* BannerADController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerADController.m; sourceTree = "<group>"; };
-		7DA5673224B32C7900224A98 /* InterstitialAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialAdViewController.h; sourceTree = "<group>"; };
-		7DA5673324B32C7900224A98 /* NativeInfosDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInfosDemoController.m; sourceTree = "<group>"; };
-		7DA5673424B32C7900224A98 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		7DA5673524B32C7A00224A98 /* NativeAdListsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdListsController.h; sourceTree = "<group>"; };
-		7DA5673624B32C7A00224A98 /* DrawNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawNativeViewController.m; sourceTree = "<group>"; };
-		7DA5673724B32C7A00224A98 /* DrawNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNativeViewController.h; sourceTree = "<group>"; };
-		7DA5673824B32C7A00224A98 /* NativeInfosDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInfosDemoController.h; sourceTree = "<group>"; };
-		7DA5673924B32C7A00224A98 /* DrawAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawAdCell.h; sourceTree = "<group>"; };
-		7DA5673A24B32C7A00224A98 /* RewardVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardVideoViewController.m; sourceTree = "<group>"; };
-		7DA5673B24B32C7A00224A98 /* DrawAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawAdCell.m; sourceTree = "<group>"; };
-		7DA5673C24B32C7A00224A98 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7DA5673D24B32C7A00224A98 /* NativeAdListsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdListsController.m; sourceTree = "<group>"; };
-		7DA5673E24B32C7A00224A98 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		7DA5673F24B32C7A00224A98 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7DA5674124B32C7A00224A98 /* NativeNewsNormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeNewsNormalModel.h; sourceTree = "<group>"; };
-		7DA5674224B32C7A00224A98 /* NativeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeHelper.m; sourceTree = "<group>"; };
-		7DA5674324B32C7A00224A98 /* NativeDemoTableViewListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeDemoTableViewListVC.m; sourceTree = "<group>"; };
-		7DA5674424B32C7A00224A98 /* NativeNewsNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeNewsNormalCell.h; sourceTree = "<group>"; };
-		7DA5674524B32C7A00224A98 /* NativeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeHelper.h; sourceTree = "<group>"; };
-		7DA5674624B32C7A00224A98 /* NativeNewsNormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeNewsNormalModel.m; sourceTree = "<group>"; };
-		7DA5674724B32C7A00224A98 /* NativeDemoTableViewListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeDemoTableViewListVC.xib; sourceTree = "<group>"; };
-		7DA5674824B32C7A00224A98 /* nativeNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nativeNews.json; sourceTree = "<group>"; };
-		7DA5674924B32C7A00224A98 /* NativeDemoTableViewListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeDemoTableViewListVC.h; sourceTree = "<group>"; };
-		7DA5674A24B32C7A00224A98 /* NativeNewsNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeNewsNormalCell.m; sourceTree = "<group>"; };
-		7DA5674B24B32C7A00224A98 /* BannerADController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerADController.h; sourceTree = "<group>"; };
-		7DA5674C24B32C7A00224A98 /* InterstitialAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialAdViewController.m; sourceTree = "<group>"; };
+		7DA569C224BEC3A800224A98 /* BannerADController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerADController.h; sourceTree = "<group>"; };
+		7DA569C324BEC3A800224A98 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7DA569C524BEC3A800224A98 /* NativeNewsNormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeNewsNormalModel.h; sourceTree = "<group>"; };
+		7DA569C624BEC3A800224A98 /* NativeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeHelper.m; sourceTree = "<group>"; };
+		7DA569C724BEC3A800224A98 /* NativeDemoTableViewListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeDemoTableViewListVC.m; sourceTree = "<group>"; };
+		7DA569C824BEC3A800224A98 /* NativeNewsNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeNewsNormalCell.h; sourceTree = "<group>"; };
+		7DA569C924BEC3A800224A98 /* NativeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeHelper.h; sourceTree = "<group>"; };
+		7DA569CA24BEC3A800224A98 /* NativeNewsNormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeNewsNormalModel.m; sourceTree = "<group>"; };
+		7DA569CB24BEC3A800224A98 /* NativeDemoTableViewListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeDemoTableViewListVC.xib; sourceTree = "<group>"; };
+		7DA569CC24BEC3A800224A98 /* nativeNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nativeNews.json; sourceTree = "<group>"; };
+		7DA569CD24BEC3A800224A98 /* NativeDemoTableViewListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeDemoTableViewListVC.h; sourceTree = "<group>"; };
+		7DA569CE24BEC3A800224A98 /* NativeNewsNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeNewsNormalCell.m; sourceTree = "<group>"; };
+		7DA569CF24BEC3A800224A98 /* DrawAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawAdCell.h; sourceTree = "<group>"; };
+		7DA569D024BEC3A800224A98 /* DrawNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNativeViewController.h; sourceTree = "<group>"; };
+		7DA569D124BEC3A800224A98 /* BannerADController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerADController.m; sourceTree = "<group>"; };
+		7DA569D224BEC3A900224A98 /* NativeAdListsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAdListsController.h; sourceTree = "<group>"; };
+		7DA569D324BEC3A900224A98 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		7DA569D424BEC3A900224A98 /* DrawAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawAdCell.m; sourceTree = "<group>"; };
+		7DA569D524BEC3A900224A98 /* NewsOutAdViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsOutAdViewController2.m; sourceTree = "<group>"; };
+		7DA569D624BEC3A900224A98 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7DA569D724BEC3A900224A98 /* NewsOutAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsOutAdViewController.h; sourceTree = "<group>"; };
+		7DA569D824BEC3A900224A98 /* RewardVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardVideoViewController.m; sourceTree = "<group>"; };
+		7DA569D924BEC3AA00224A98 /* NewsOutAdViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsOutAdViewController2.h; sourceTree = "<group>"; };
+		7DA569DA24BEC3AA00224A98 /* InterstitialAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialAdViewController.m; sourceTree = "<group>"; };
+		7DA569DB24BEC3AA00224A98 /* DrawNativeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawNativeViewController.xib; sourceTree = "<group>"; };
+		7DA569DC24BEC3AA00224A98 /* NativeInfosDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInfosDemoController.h; sourceTree = "<group>"; };
+		7DA569DD24BEC3AA00224A98 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		7DA569DE24BEC3AA00224A98 /* NativeInfosDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInfosDemoController.m; sourceTree = "<group>"; };
+		7DA569DF24BEC3AA00224A98 /* InterstitialAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialAdViewController.h; sourceTree = "<group>"; };
+		7DA569E024BEC3AA00224A98 /* RewardVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardVideoViewController.h; sourceTree = "<group>"; };
+		7DA569E124BEC3AB00224A98 /* NativeAdListsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAdListsController.m; sourceTree = "<group>"; };
+		7DA569E224BEC3AB00224A98 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7DA569E324BEC3AB00224A98 /* DrawNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawNativeViewController.m; sourceTree = "<group>"; };
+		7DA569E424BEC3AB00224A98 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7DA569E524BEC3AB00224A98 /* NewsOutAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsOutAdViewController.m; sourceTree = "<group>"; };
 		A2FAE6F1DA9A1CBD28AD4A74 /* Pods-Demo3000.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo3000.release.xcconfig"; path = "Target Support Files/Pods-Demo3000/Pods-Demo3000.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,50 +113,54 @@
 		7D563B8224A097FC00A5C18F /* Demo3000 */ = {
 			isa = PBXGroup;
 			children = (
+				7DA569D624BEC3A900224A98 /* AppDelegate.h */,
+				7DA569E224BEC3AB00224A98 /* AppDelegate.m */,
+				7DA569C224BEC3A800224A98 /* BannerADController.h */,
+				7DA569D124BEC3A800224A98 /* BannerADController.m */,
+				7DA569CF24BEC3A800224A98 /* DrawAdCell.h */,
+				7DA569D424BEC3A900224A98 /* DrawAdCell.m */,
+				7DA569D024BEC3A800224A98 /* DrawNativeViewController.h */,
+				7DA569E324BEC3AB00224A98 /* DrawNativeViewController.m */,
+				7DA569DB24BEC3AA00224A98 /* DrawNativeViewController.xib */,
+				7DA569DF24BEC3AA00224A98 /* InterstitialAdViewController.h */,
+				7DA569DA24BEC3AA00224A98 /* InterstitialAdViewController.m */,
+				7DA569D224BEC3A900224A98 /* NativeAdListsController.h */,
+				7DA569E124BEC3AB00224A98 /* NativeAdListsController.m */,
+				7DA569C424BEC3A800224A98 /* NativeDemos */,
+				7DA569DC24BEC3AA00224A98 /* NativeInfosDemoController.h */,
+				7DA569DE24BEC3AA00224A98 /* NativeInfosDemoController.m */,
+				7DA569D724BEC3A900224A98 /* NewsOutAdViewController.h */,
+				7DA569E524BEC3AB00224A98 /* NewsOutAdViewController.m */,
+				7DA569D924BEC3AA00224A98 /* NewsOutAdViewController2.h */,
+				7DA569D524BEC3A900224A98 /* NewsOutAdViewController2.m */,
+				7DA569D324BEC3A900224A98 /* NewsViewController.h */,
+				7DA569DD24BEC3AA00224A98 /* NewsViewController.m */,
+				7DA569E024BEC3AA00224A98 /* RewardVideoViewController.h */,
+				7DA569D824BEC3A900224A98 /* RewardVideoViewController.m */,
+				7DA569E424BEC3AB00224A98 /* ViewController.h */,
+				7DA569C324BEC3A800224A98 /* ViewController.m */,
 				7D563B8C24A097FC00A5C18F /* Main.storyboard */,
 				7D563B8F24A097FE00A5C18F /* Assets.xcassets */,
 				7D563B9124A097FE00A5C18F /* LaunchScreen.storyboard */,
-				7DA5673F24B32C7A00224A98 /* AppDelegate.h */,
-				7DA5672D24B32C7900224A98 /* AppDelegate.m */,
-				7DA5674B24B32C7A00224A98 /* BannerADController.h */,
-				7DA5673124B32C7900224A98 /* BannerADController.m */,
-				7DA5673924B32C7A00224A98 /* DrawAdCell.h */,
-				7DA5673B24B32C7A00224A98 /* DrawAdCell.m */,
-				7DA5673724B32C7A00224A98 /* DrawNativeViewController.h */,
-				7DA5673624B32C7A00224A98 /* DrawNativeViewController.m */,
-				7DA5672E24B32C7900224A98 /* DrawNativeViewController.xib */,
-				7DA5673224B32C7900224A98 /* InterstitialAdViewController.h */,
-				7DA5674C24B32C7A00224A98 /* InterstitialAdViewController.m */,
-				7DA5673524B32C7A00224A98 /* NativeAdListsController.h */,
-				7DA5673D24B32C7A00224A98 /* NativeAdListsController.m */,
-				7DA5674024B32C7A00224A98 /* NativeDemos */,
-				7DA5673824B32C7A00224A98 /* NativeInfosDemoController.h */,
-				7DA5673324B32C7900224A98 /* NativeInfosDemoController.m */,
-				7DA5673E24B32C7A00224A98 /* NewsViewController.h */,
-				7DA5673424B32C7900224A98 /* NewsViewController.m */,
-				7DA5672F24B32C7900224A98 /* RewardVideoViewController.h */,
-				7DA5673A24B32C7A00224A98 /* RewardVideoViewController.m */,
-				7DA5673024B32C7900224A98 /* ViewController.h */,
-				7DA5673C24B32C7A00224A98 /* ViewController.m */,
 				7D563B9424A097FE00A5C18F /* Info.plist */,
 				7D563B9524A097FE00A5C18F /* main.m */,
 			);
 			path = Demo3000;
 			sourceTree = "<group>";
 		};
-		7DA5674024B32C7A00224A98 /* NativeDemos */ = {
+		7DA569C424BEC3A800224A98 /* NativeDemos */ = {
 			isa = PBXGroup;
 			children = (
-				7DA5674124B32C7A00224A98 /* NativeNewsNormalModel.h */,
-				7DA5674224B32C7A00224A98 /* NativeHelper.m */,
-				7DA5674324B32C7A00224A98 /* NativeDemoTableViewListVC.m */,
-				7DA5674424B32C7A00224A98 /* NativeNewsNormalCell.h */,
-				7DA5674524B32C7A00224A98 /* NativeHelper.h */,
-				7DA5674624B32C7A00224A98 /* NativeNewsNormalModel.m */,
-				7DA5674724B32C7A00224A98 /* NativeDemoTableViewListVC.xib */,
-				7DA5674824B32C7A00224A98 /* nativeNews.json */,
-				7DA5674924B32C7A00224A98 /* NativeDemoTableViewListVC.h */,
-				7DA5674A24B32C7A00224A98 /* NativeNewsNormalCell.m */,
+				7DA569C524BEC3A800224A98 /* NativeNewsNormalModel.h */,
+				7DA569C624BEC3A800224A98 /* NativeHelper.m */,
+				7DA569C724BEC3A800224A98 /* NativeDemoTableViewListVC.m */,
+				7DA569C824BEC3A800224A98 /* NativeNewsNormalCell.h */,
+				7DA569C924BEC3A800224A98 /* NativeHelper.h */,
+				7DA569CA24BEC3A800224A98 /* NativeNewsNormalModel.m */,
+				7DA569CB24BEC3A800224A98 /* NativeDemoTableViewListVC.xib */,
+				7DA569CC24BEC3A800224A98 /* nativeNews.json */,
+				7DA569CD24BEC3A800224A98 /* NativeDemoTableViewListVC.h */,
+				7DA569CE24BEC3A800224A98 /* NativeNewsNormalCell.m */,
 			);
 			path = NativeDemos;
 			sourceTree = "<group>";
@@ -231,11 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D563B9324A097FE00A5C18F /* LaunchScreen.storyboard in Resources */,
-				7DA5675A24B32C7A00224A98 /* NativeDemoTableViewListVC.xib in Resources */,
-				7DA5674E24B32C7A00224A98 /* DrawNativeViewController.xib in Resources */,
+				7DA569EB24BEC3AC00224A98 /* nativeNews.json in Resources */,
 				7D563B9024A097FE00A5C18F /* Assets.xcassets in Resources */,
+				7DA569F224BEC3AC00224A98 /* DrawNativeViewController.xib in Resources */,
+				7DA569EA24BEC3AC00224A98 /* NativeDemoTableViewListVC.xib in Resources */,
 				7D563B8E24A097FC00A5C18F /* Main.storyboard in Resources */,
-				7DA5675B24B32C7A00224A98 /* nativeNews.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,21 +281,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DA5675524B32C7A00224A98 /* ViewController.m in Sources */,
-				7DA5674D24B32C7A00224A98 /* AppDelegate.m in Sources */,
-				7DA5675C24B32C7A00224A98 /* NativeNewsNormalCell.m in Sources */,
-				7DA5675224B32C7A00224A98 /* DrawNativeViewController.m in Sources */,
-				7DA5675424B32C7A00224A98 /* DrawAdCell.m in Sources */,
-				7DA5675D24B32C7A00224A98 /* InterstitialAdViewController.m in Sources */,
-				7DA5675024B32C7A00224A98 /* NativeInfosDemoController.m in Sources */,
-				7DA5675724B32C7A00224A98 /* NativeHelper.m in Sources */,
-				7DA5675824B32C7A00224A98 /* NativeDemoTableViewListVC.m in Sources */,
-				7DA5675124B32C7A00224A98 /* NewsViewController.m in Sources */,
-				7DA5675924B32C7A00224A98 /* NativeNewsNormalModel.m in Sources */,
-				7DA5675324B32C7A00224A98 /* RewardVideoViewController.m in Sources */,
-				7DA5675624B32C7A00224A98 /* NativeAdListsController.m in Sources */,
+				7DA569E624BEC3AC00224A98 /* ViewController.m in Sources */,
+				7DA569F524BEC3AC00224A98 /* NativeAdListsController.m in Sources */,
+				7DA569F124BEC3AC00224A98 /* InterstitialAdViewController.m in Sources */,
+				7DA569E724BEC3AC00224A98 /* NativeHelper.m in Sources */,
+				7DA569F324BEC3AC00224A98 /* NewsViewController.m in Sources */,
+				7DA569EE24BEC3AC00224A98 /* DrawAdCell.m in Sources */,
+				7DA569F024BEC3AC00224A98 /* RewardVideoViewController.m in Sources */,
+				7DA569F824BEC3AC00224A98 /* NewsOutAdViewController.m in Sources */,
+				7DA569EC24BEC3AC00224A98 /* NativeNewsNormalCell.m in Sources */,
+				7DA569E824BEC3AC00224A98 /* NativeDemoTableViewListVC.m in Sources */,
+				7DA569F724BEC3AC00224A98 /* DrawNativeViewController.m in Sources */,
+				7DA569E924BEC3AC00224A98 /* NativeNewsNormalModel.m in Sources */,
+				7DA569ED24BEC3AC00224A98 /* BannerADController.m in Sources */,
+				7DA569F424BEC3AC00224A98 /* NativeInfosDemoController.m in Sources */,
 				7D563B9624A097FE00A5C18F /* main.m in Sources */,
-				7DA5674F24B32C7A00224A98 /* BannerADController.m in Sources */,
+				7DA569EF24BEC3AC00224A98 /* NewsOutAdViewController2.m in Sources */,
+				7DA569F624BEC3AC00224A98 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -110,13 +110,27 @@
 - (void)nativeAd:(VLNNativeAd *)nativeAd successToLoad:(VLNNativeAdModel *)nativeAdModel {
     NSLog(@"nativeAd successToLoad");
     if (self.nativeAd) {
-        [VLNNativeAd registerAdModel:nativeAdModel toView:self.testView];
+        
+        [self renderWithModel:nativeAdModel];
+        
     }
     else {
         [self.datasource addObject:nativeAdModel];
         [self.tableView reloadData];
     }
 }
+
+- (void)renderWithModel:(VLNNativeAdModel *)nativeAdModel {
+    [VLNNativeAd registerAdModel:nativeAdModel toView:self.testView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.testView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self renderWithModel:nativeAdModel];
+        });
+    });
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
