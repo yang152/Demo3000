@@ -33,10 +33,11 @@
 
 - (void)loadAd {
     for (int i = 0; i < 7; i++) {
-        VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:@"scene"];
-        ad.delegate = self;
-        ad.viewController = self;
-        [ad loadAdData];
+        VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:@"scene"
+                                                          adSize:CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width/2)
+                                                        delegate:self
+                                                  viewController:self];
+        [ad loadAd];
         [self.nativeAdArr addObject:ad];
     }
 }
@@ -61,9 +62,9 @@
 /**
  *  原生广告加载广告数据成功回调，返回为VLionNativeAdModel对象
  */
-- (void)nativeAd:(VLNNativeAd *)nativeAd successToLoad:(VLNNativeAdModel *)nativeAdModel {
+- (void)vl_nativeAdDidLoadSuccess:(VLNNativeAd *)nativeAd nativeAdModels:(NSArray<VLNativeAdInfo *> *)nativeAdModels {
     NSUInteger index = arc4random()%self.dataArr.count;
-    [self.dataArr insertObject:nativeAdModel atIndex:index];
+    [self.dataArr insertObject:nativeAdModels.firstObject atIndex:index];
     [self.tableView reloadData];
     NSLog(@"---------加载成功");
 }
@@ -71,28 +72,28 @@
 /**
  *  原生广告加载广告数据失败回调
  */
-- (void)nativeAd:(VLNNativeAd *)nativeAd didFailWithError:(NSError *)error {
+- (void)vl_nativeAd:(VLNNativeAd *)nativeAd didFailWithError:(NSError *)error {
     NSLog(@"---------加载失败");
 }
 
 /**
  广告曝光回调
  */
-- (void)nativeAdExposured:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdExposured:(VLNNativeAd *)nativeAd {
     [self.tableView reloadData];
 }
 
 /**
  广告点击回调
  */
-- (void)nativeAdDidClick:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdDidClick:(VLNNativeAd *)nativeAd {
     
 }
 
 /**
  广告点击关闭
  */
-- (void)nativeAdDidClickClose:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdDidClickClose:(VLNNativeAd *)nativeAd {
     
 }
 
@@ -116,7 +117,7 @@
         [cell refreshUIWithModel:model];
         return cell;
     }
-    else if([model isKindOfClass:[VLNNativeAdModel class]]) {
+    else if([model isKindOfClass:[VLNativeAdInfo class]]) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"UITableViewCell"];
@@ -125,7 +126,9 @@
             [cell.contentView addSubview:renderV];
         }
         UIView *renderV = [cell.contentView viewWithTag:10000];
-        [VLNNativeAd registerAdModel:model toView:renderV];
+        VLNativeAdInfo *info = (VLNativeAdInfo *)model;
+        renderV.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, info.adSize.height);
+        [info renderToView:renderV];
         return cell;
     }
     
@@ -153,8 +156,8 @@
     if ([model isKindOfClass:[NativeNewsNormalModel class]]) {
         return [(NativeNewsNormalModel *)model cellHeight];
     }
-    else if ([model isKindOfClass:[VLNNativeAdModel class]]) {
-        VLNNativeAdModel *info = (VLNNativeAdModel *)model;
+    else if ([model isKindOfClass:[VLNativeAdInfo class]]) {
+        VLNativeAdInfo *info = (VLNativeAdInfo *)model;
         return info.adSize.height;
     }
     return 100;

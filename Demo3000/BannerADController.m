@@ -30,10 +30,13 @@
     self.title = @"Banner 广告";
     
     //广告容器
-    self.bannerView = [[VLNBannerView alloc] initWithSceneName:self.tagId];
-    self.bannerView.delegate = self;
-    self.bannerView.rootViewController = self;
-    [self.bannerView loadAdAndShow];
+    CGSize adSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width/3);
+    self.bannerView = [[VLNBannerView alloc] initWithSceneName:self.tagId
+                                                        adSize:adSize
+                                                      delegate:self
+                                            rootViewController:self];
+    [self.bannerView loadBannerView];
+    self.bannerView.frame = CGRectMake(0, 100, adSize.width, adSize.height);
     
     self.adButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.adButton.frame = CGRectMake(0, 0, 200, 40);
@@ -48,7 +51,7 @@
 - (void)refresh
 {
     [self.bannerView removeFromSuperview];
-    [self.bannerView loadAdAndShow];
+    [self.bannerView loadBannerView];
 }
 
 - (CGRect)bannerView:(VLNBannerView *)bannerView didLoadBannerImageSize:(CGSize)size {
@@ -56,25 +59,25 @@
     return CGRectMake(0, 88, screenSize.width, size.height / size.width * (screenSize.width));
 }
 
-- (void)bannerViewDidLoad:(VLNBannerView *)bannerView {
+- (void)vl_bannerViewDidLoad:(VLNBannerView *)bannerView {
     
     NSLog(@"BannerAd 加载成功");
     [self.view addSubview:self.bannerView];
 }
 
-- (void)bannerView:(VLNBannerView *)bannerView didFailWithError:(NSError *)error {
+- (void)vl_bannerView:(VLNBannerView *)bannerView didFailWithError:(NSError *)error {
     NSLog(@"BannerAd 异常");
 }
 
-- (void)bannerViewExposured:(VLNBannerView *)bannerView {
+- (void)vl_bannerViewExposured:(VLNBannerView *)bannerView {
     NSLog(@"BannerAd 曝光");
 }
 
-- (void)bannerViewDidClick:(VLNBannerView *)bannerView {
+- (void)vl_bannerViewDidClick:(VLNBannerView *)bannerView {
     NSLog(@"BannerAd 点击");
 }
 
-- (void)bannerViewDidClose:(VLNBannerView *)bannerView {
+- (void)vl_bannerViewDidClose:(VLNBannerView *)bannerView {
     NSLog(@"BannerAd 关闭");
     [self.bannerView removeFromSuperview];
 }

@@ -9,7 +9,7 @@
 #import "RewardVideoViewController.h"
 #import <VLionADSDK/VLNADSDK.h>
 
-@interface RewardVideoViewController ()<VLNRewardedVideoAdDelegate>
+@interface RewardVideoViewController ()<VLNRewardedVideoAdDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) VLNRewardedVideoAd *rewardVideoAdAd;
 
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.rewardVideoAdAd = [[VLNRewardedVideoAd alloc] initWithSceneName:@"scene"];
+    self.rewardVideoAdAd = [[VLNRewardedVideoAd alloc] initWithSceneName:self.tagId];
     self.rewardVideoAdAd.delegate = self;
     [self.rewardVideoAdAd loadAd];
     
@@ -37,13 +37,6 @@
     self.showButton.enabled = NO;
     [self.view addSubview:self.showButton];
     
-//    self.loadButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    self.loadButton.frame = CGRectMake(0, 0, 200, 40);
-//    [self.loadButton setBackgroundColor:[UIColor grayColor]];
-//    self.loadButton.center = self.view.center;
-//    [self.loadButton setTitle:@"加载广告" forState:UIControlStateNormal];
-//    [self.loadButton addTarget:self action:@selector(loadAd) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:self.loadButton];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -64,42 +57,42 @@
     [self.rewardVideoAdAd showAdFromRootViewController:self];
 }
 
-- (void)rewardVideoAdDidLoad:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdDidLoad:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"数据加载成功");
     self.showButton.enabled = YES;
     self.showButton.backgroundColor = [UIColor blueColor];
 }
 
-- (void)rewardVideoAdVideoDidLoad:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdVideoDidLoad:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"视频加载成功");
 }
 
-- (void)rewardVideoAdWillVisible:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdWillVisible:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"视频将要展示");
 }
 
-- (void)rewardVideoAdDidExposed:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdDidExposed:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"视频曝光");
 }
 
-- (void)rewardVideoAdDidClose:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdDidClose:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"视频关闭");
 }
 
-- (void)rewardVideoAdDidClicked:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdDidClicked:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"视频点击");
 }
 
 
-- (void)rewardVideoAd:(VLNRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error {
+- (void)vl_rewardVideoAd:(VLNRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error {
     NSLog(@"出错");
 }
 
-- (void)rewardVideoAdDidRewardEffective:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdDidRewardEffective:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"达到激励条件");
 }
 
-- (void)rewardVideoAdDidPlayFinish:(VLNRewardedVideoAd *)rewardedVideoAd {
+- (void)vl_rewardVideoAdDidPlayFinish:(VLNRewardedVideoAd *)rewardedVideoAd {
     NSLog(@"播放完成");
 }
 

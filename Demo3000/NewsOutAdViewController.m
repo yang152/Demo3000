@@ -55,13 +55,14 @@
 - (BOOL)vlionAdPageView:(VlionAdPageView *_Nullable)pageView didLoadAdInfo:(VLNewsAdInfoModel *_Nullable)adInfoModel titleIndex:(NSInteger)titleIndex {
 //    BOOL allowUserDefine = arc4random()%100%2;
 //    if (allowUserDefine) {
-        VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:@"scene"];
-        ad.delegate = self;
-        ad.viewController = self;
+    VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:@"scene"
+                                                      adSize:CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.width/2)
+                                                    delegate:self
+                                              viewController:self];
         [self.ads setObject:ad forKey:adInfoModel.adUniqueId];
         [self.pageMs setObject:adInfoModel forKey:adInfoModel.adUniqueId];
 
-        [ad loadAdData];
+        [ad loadAd];
 //    }
 //
 //    return allowUserDefine;
@@ -71,7 +72,7 @@
 /**
  *  原生广告加载广告数据成功回调，返回为VLionNativeAdModel对象
  */
-- (void)nativeAd:(VLNNativeAd *)nativeAd successToLoad:(VLNNativeAdModel *)nativeAdModel {
+- (void)vl_nativeAdDidLoadSuccess:(VLNNativeAd *)nativeAd nativeAdModels:(NSArray<VLNativeAdInfo *> *)nativeAdModels {
     __block VLNewsAdInfoModel *info;
     [self.ads enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, VLNNativeAd * _Nonnull obj, BOOL * _Nonnull stop) {
         if (obj == nativeAd) {
@@ -83,21 +84,21 @@
     UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 0.5)];
     info.adView = adView;
     
-    [VLNNativeAd registerAdModel:nativeAdModel toView:info.adView];
+    [nativeAdModels.firstObject renderToView:info.adView];
     [self.pageView updateView];
 }
 
 /**
  *  原生广告加载广告数据失败回调
  */
-- (void)nativeAd:(VLNNativeAd *)nativeAd didFailWithError:(NSError *)error {
+- (void)vl_nativeAd:(VLNNativeAd *)nativeAd didFailWithError:(NSError *)error {
     NSLog(@"-------error-----%@", error);
 }
 
 /**
  广告曝光回调
  */
-- (void)nativeAdExposured:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdExposured:(VLNNativeAd *)nativeAd {
     
     __block VLNewsAdInfoModel *info;
     [self.ads enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, VLNNativeAd * _Nonnull obj, BOOL * _Nonnull stop) {
@@ -112,7 +113,7 @@
     [self.pageView updateView];
 }
 
-- (void)nativeAdDidClickClose:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdDidClickClose:(VLNNativeAd *)nativeAd {
     __block VLNewsAdInfoModel *info;
     [self.ads enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, VLNNativeAd * _Nonnull obj, BOOL * _Nonnull stop) {
         if (obj == nativeAd) {

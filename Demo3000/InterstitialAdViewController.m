@@ -48,7 +48,7 @@
     [self.interstitialAd presentFromRootViewController:self];
 }
 
-- (void)interstitialAdDidLoad:(VLNInterstitialAd *)interstitialAd {
+- (void)vl_interstitialAdDidLoad:(VLNInterstitialAd *)interstitialAd {
     
     self.adButton.backgroundColor = [UIColor blueColor];
     self.adButton.enabled = YES;
@@ -56,23 +56,23 @@
     NSLog(@"interstitialAdDidLoad");
 }
 
-- (void)interstitialAd:(VLNInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
+- (void)vl_interstitialAd:(VLNInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
     NSLog(@"interstitialAd didFailWithError");
 }
 
-- (void)interstitialAdExposured:(VLNInterstitialAd *)interstitialAd {
+- (void)vl_interstitialAdExposured:(VLNInterstitialAd *)interstitialAd {
     NSLog(@"interstitialAdExposured");
 }
 
-- (void)interstitialAdDidClick:(VLNInterstitialAd *)interstitialAd {
+- (void)vl_interstitialAdDidClick:(VLNInterstitialAd *)interstitialAd {
     NSLog(@"interstitialAdDidClick");
 }
 
-- (void)interstitialAdWillClose:(VLNInterstitialAd *)interstitialAd {
+- (void)vl_interstitialAdWillClose:(VLNInterstitialAd *)interstitialAd {
     NSLog(@"interstitialAdWillClose");
 }
 
-- (void)interstitialAdDidClose:(VLNInterstitialAd *)interstitialAd {
+- (void)vl_interstitialAdDidClose:(VLNInterstitialAd *)interstitialAd {
     NSLog(@"interstitialAdDidClose");
     [self.interstitialAd loadAdData];
     self.adButton.backgroundColor = [UIColor grayColor];

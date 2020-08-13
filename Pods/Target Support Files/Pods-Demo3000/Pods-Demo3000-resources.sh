@@ -99,6 +99,8 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/BaiduMobAd_SDK/SDK/baidumobadsdk.bundle"
   install_resource "${PODS_ROOT}/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks/BUAdSDK.bundle"
+  install_resource "${PODS_ROOT}/RSPodKSAdaper/KSAdSDK.framework/CU.bundle"
+  install_resource "${PODS_ROOT}/RSPodKSAdaper/KSAdSDK.framework/KSAdSDK.bundle"
   install_resource "${PODS_ROOT}/SigmobAd-iOS/Sigmob/Sigmob.bundle"
   install_resource "${PODS_ROOT}/Vlion3000AdSDK/Vlion3000AdSDK/RSGameVlionAd/RSGameVlionAd.bundle"
   install_resource "${PODS_ROOT}/Vlion3000AdSDK/Vlion3000AdSDK/VLionADSDK/VLionAdImg.bundle"
@@ -106,6 +108,8 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/BaiduMobAd_SDK/SDK/baidumobadsdk.bundle"
   install_resource "${PODS_ROOT}/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks/BUAdSDK.bundle"
+  install_resource "${PODS_ROOT}/RSPodKSAdaper/KSAdSDK.framework/CU.bundle"
+  install_resource "${PODS_ROOT}/RSPodKSAdaper/KSAdSDK.framework/KSAdSDK.bundle"
   install_resource "${PODS_ROOT}/SigmobAd-iOS/Sigmob/Sigmob.bundle"
   install_resource "${PODS_ROOT}/Vlion3000AdSDK/Vlion3000AdSDK/RSGameVlionAd/RSGameVlionAd.bundle"
   install_resource "${PODS_ROOT}/Vlion3000AdSDK/Vlion3000AdSDK/VLionADSDK/VLionAdImg.bundle"

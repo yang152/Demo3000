@@ -11,7 +11,7 @@
 
 @interface NativeInfosDemoController () <VLNNativeAdDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) NSMutableArray<VLNNativeAdModel *> *datasource;
+@property (nonatomic, strong) NSMutableArray<VLNativeAdInfo *> *datasource;
 
 @property (nonatomic, strong) VLNNativeAd  *ad;
 
@@ -70,10 +70,10 @@
 
 - (void)loadData
 {
-    VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:self.tagId];
-    ad.delegate = self;
-    ad.viewController = self;
-    [ad loadAdData];
+    VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:self.tagId
+                                                      adSize:self.testView.bounds.size
+                                                    delegate:self viewController:self];
+    [ad loadAd];
     
     self.ad = ad;
 }
@@ -89,15 +89,8 @@
     
     if (!tableCell) {
         tableCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:adIdentifier];
-        VLNNativeExpressAdView *adView = [[VLNNativeExpressAdView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 100)];
-        adView.tag = 999;
-        [tableCell.contentView addSubview:adView];
-        adView.buttonColor = [UIColor blueColor];
     }
-    
-    VLNNativeExpressAdView *adView = [tableCell.contentView viewWithTag:999];
-    adView.frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, self.h);
-    [adView renderWithAdModel:[self.datasource objectAtIndex:indexPath.row]];
+
     
     return tableCell;
 }
@@ -107,28 +100,16 @@
     return self.h;
 }
 
-- (void)nativeAd:(VLNNativeAd *)nativeAd successToLoad:(VLNNativeAdModel *)nativeAdModel {
+- (void)vl_nativeAdDidLoadSuccess:(VLNNativeAd *)nativeAd nativeAdModels:(NSArray<VLNativeAdInfo *> *)nativeAdModels {
     NSLog(@"nativeAd successToLoad");
     if (self.nativeAd) {
-        
-        [self renderWithModel:nativeAdModel];
+        [nativeAdModels.firstObject renderToView:self.testView];
         
     }
     else {
-        [self.datasource addObject:nativeAdModel];
+        [self.datasource addObject:nativeAdModels.firstObject];
         [self.tableView reloadData];
     }
-}
-
-- (void)renderWithModel:(VLNNativeAdModel *)nativeAdModel {
-    [VLNNativeAd registerAdModel:nativeAdModel toView:self.testView];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.testView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self renderWithModel:nativeAdModel];
-        });
-    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -142,19 +123,19 @@
     
     
 }
-- (void)nativeAdDidClick:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdDidClick:(VLNNativeAd *)nativeAd {
     NSLog(@"nativeAd click");
 }
 
-- (void)nativeAdExposured:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdExposured:(VLNNativeAd *)nativeAd {
     NSLog(@"nativeAd exposured");
 }
 
-- (void)nativeAd:(VLNNativeAd *)nativeAd didFailWithError:(NSError *)error {
+- (void)vl_nativeAd:(VLNNativeAd *)nativeAd didFailWithError:(NSError *)error {
     NSLog(@"nativeAd fail %@", error.userInfo[@"NSLocalizedFailureReason"]);
 }
 
-- (void)nativeAdDidClickClose:(VLNNativeAd *)nativeAd {
+- (void)vl_nativeAdDidClickClose:(VLNNativeAd *)nativeAd {
     if (self.testView.subviews.count) {
         [self.testView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     }

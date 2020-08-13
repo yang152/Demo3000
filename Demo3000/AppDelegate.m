@@ -29,11 +29,9 @@
         
         if (success) {
             VLNSplashAd *ad = [[VLNSplashAd alloc] initWithSceneName:@"scene"];
-            self.ad = ad;
-            ad.placeholderImage = [UIImage imageNamed:@"bg_launch_1242"];
             ad.delegate = self;
+            self.ad = ad;
             [ad loadAdAndShowInWindow:self.window];
-//            [self.ad loadAd];
         }
         else {
             NSLog(@"sdk初始化失败");
@@ -55,28 +53,27 @@
     return YES;
 }
 
-- (void)splashAdDidLoad:(VLNSplashAd *)splashAd {
+- (void)vl_splashAdDidLoad:(VLNSplashAd *)splashAd {
     NSLog(@"VLNSplashAd DidLoad");
-//    [self.ad showAdInWindow:self.window];
 }
 
-- (void)splashAd:(VLNSplashAd *)splashAd didFailWithError:(NSError *)error {
+- (void)vl_splashAd:(VLNSplashAd *)splashAd didFailWithError:(NSError *)error {
     NSLog(@"VLNSplashAd didFailWithError");
 }
 
-- (void)splashAdExposured:(VLNSplashAd *)splashAd {
+- (void)vl_splashAdExposured:(VLNSplashAd *)splashAd {
     NSLog(@"VLNSplashAd splashAdExposured");
 }
 
-- (void)splashAdDidClick:(VLNSplashAd *)splashAd {
+- (void)vl_splashAdDidClick:(VLNSplashAd *)splashAd {
     NSLog(@"VLNSplashAd splashAdDidClick");
 }
 
-- (void)splashAdWillClose:(VLNSplashAd *)splashAd {
+- (void)vl_splashAdWillClose:(VLNSplashAd *)splashAd {
     NSLog(@"VLNSplashAd splashAdWillClose");
 }
 
-- (void)splashAdDidClose:(VLNSplashAd *)splashAd {
+- (void)vl_splashAdDidClose:(VLNSplashAd *)splashAd {
     NSLog(@"VLNSplashAd splashAdDidClose");
 }
 

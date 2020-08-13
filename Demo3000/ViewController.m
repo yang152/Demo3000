@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, ADType) {
     self.dataSource = @[
                         @{
                             @"title": @"横幅图片广告",
-                            @"tagId": @"scene",
+                            @"tagId": @"default",
                             @"ADType": @(ADTypeBanner)
                             },
                         @{
@@ -215,7 +215,6 @@ typedef NS_ENUM(NSInteger, ADType) {
 
 - (void)loadSplashAd:(NSString *)tagId {
     self.splashAd = [[VLNSplashAd alloc] initWithSceneName:@"scene"];
-    self.splashAd.placeholderImage = [UIImage imageNamed:@"placeholderImage"];
     [self.splashAd loadAdAndShowInWindow:self.view.window];
 }
 

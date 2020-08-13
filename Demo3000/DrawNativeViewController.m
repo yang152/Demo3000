@@ -54,11 +54,11 @@
 /**
  *  加载广告数据失败回调
  */
-- (void)drawAd:(VLNDrawAd *_Nullable)nativeAd didFailWithError:(NSError *_Nullable)error {
+- (void)vl_drawAd:(VLNDrawAd *_Nullable)nativeAd didFailWithError:(NSError *_Nullable)error {
     NSLog(@"%@", error.localizedDescription);
 }
 
-- (void)drawAd:(VLNDrawAd *)drawAd successToLoad:(NSArray<VLNDrawAdModel *> * _Nullable)drawAdModels {
+- (void)vl_drawAd:(VLNDrawAd *)drawAd successToLoad:(NSArray<VLNDrawAdModel *> * _Nullable)drawAdModels {
 //    VLNDrawAdModel *m = drawAdModels.firstObject;
 //    [m renderToView:self.testView];
     for (VLNDrawAdModel *info in drawAdModels) {
@@ -74,14 +74,14 @@
 /**
     广告曝光回调
  */
-- (void)drawAdExposured:(VLNDrawAd *_Nullable)drawAd {
+- (void)vl_drawAdExposured:(VLNDrawAd *_Nullable)drawAd {
     
 }
 
 /**
     广告点击回调
  */
-- (void)drawAdDidClick:(VLNDrawAd *_Nullable)drawAd {
+- (void)vl_drawAdDidClick:(VLNDrawAd *_Nullable)drawAd {
     
 }
 
