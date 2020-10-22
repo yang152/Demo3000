@@ -72,7 +72,8 @@
 {
     VLNNativeAd *ad = [[VLNNativeAd alloc] initWithSceneName:self.tagId
                                                       adSize:self.testView.bounds.size
-                                                    delegate:self viewController:self];
+                                                    delegate:self
+                                              viewController:self];
     [ad loadAd];
     
     self.ad = ad;
